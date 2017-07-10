@@ -28,7 +28,7 @@ function mockedLoader (path, parent, is_main) {
     
 const Imitation = {
     _mockedAssets: false,
-    _mockedDom: false,
+    _mockedDOM: false,
     
     
     mockStore (state) {
@@ -36,8 +36,8 @@ const Imitation = {
     },
     
     
-    mockDom (url) {
-        if (Imitation._mockedDom) return;
+    mockDOM (url) {
+        if (Imitation._mockedDOM) return;
         
         url = url || 'http://example.com';
         
@@ -55,17 +55,17 @@ const Imitation = {
             userAgent: 'node.js'
         };
         
-        Imitation._mockedDom = true;
+        Imitation._mockedDOM = true;
     },
     
     
-    unmockDom () {
-        if (!Imitation._mockedDom) return;
+    unmockDOM () {
+        if (!Imitation._mockedDOM) return;
         
         delete global['document'];
         delete global['window'];
         
-        Imitation._mockedDom = false;
+        Imitation._mockedDOM = false;
     },
     
     
