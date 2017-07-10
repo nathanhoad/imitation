@@ -1,0 +1,33 @@
+{
+  "name": "imitation",
+  "version": "1.0.0",
+  "description": "A few testing helpers for mocking",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test ava --serial"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nathanhoad/imitation.git"
+  },
+  "keywords": [
+    "testing",
+    "mocking"
+  ],
+  "author": "Nathan Hoad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanhoad/imitation/issues"
+  },
+  "homepage": "https://github.com/nathanhoad/imitation#readme",
+  "devDependencies": {
+    "ava": "^0.20.0"
+  },
+  "dependencies": {
+    "jsdom": "^11.1.0",
+    "nock": "^9.0.13",
+    "redux": "^3.7.1",
+    "redux-mock-store": "^1.2.3",
+    "redux-thunk": "^2.2.0"
+  }
+}
