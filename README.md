@@ -7,6 +7,9 @@ A few mocking helpers for testing.
 
 The most common use of Imitation is when you are testing React components that `require` css and/or images.
 
+Images will resolve as just their path and CSS files will resolve as a Proxy object that returns any custom property as 
+just the name of the property.
+
 ```javascript
 const { mockDOM, unmockDOM, mockAssets, unmockAssets } = require('imitation');
 const { test } = require('ava');

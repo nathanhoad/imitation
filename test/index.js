@@ -30,18 +30,18 @@ test('it should mock and unmock `require`', t => {
 test('it should mock and unmock the dom', t => {
     t.true(typeof global.document === "undefined");
     
-    Imitation.mockDom();
+    Imitation.mockDOM();
     
     t.true(typeof global.document !== "undefined");
     
-    Imitation.unmockDom();
+    Imitation.unmockDOM();
     
     t.true(typeof global.document === "undefined");
 });
 
 
 test('it should mock document.location', t => {
-    Imitation.mockDom('http://localhost:5000');
+    Imitation.mockDOM('http://localhost:5000');
     
     t.true(typeof global.document !== "undefined");
     t.true(typeof global.document.location !== "undefined");

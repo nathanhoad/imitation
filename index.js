@@ -11,7 +11,7 @@ const Nock = require('nock');
 var originalLoader = Module._load;
 function mockedLoader (path, parent, is_main) {
     if (path.match(/\.(png|jpg|jpeg|gif|svg|mp4|m4v|flv|mp3|wav|m4a|ogg|ogv|ogm|webm)$/)) {
-        return {};
+        return path;
     }
     
     if (path.match(/\.css$/)) {
