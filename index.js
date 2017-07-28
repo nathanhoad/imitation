@@ -14,7 +14,7 @@ function mockedLoader (path, parent, is_main) {
         return path;
     }
     
-    if (path.match(/\.css$/)) {
+    if (path.match(/\.s?css$/)) {
         return new Proxy({}, {
             get: (styles, method) => {
                 return method;
