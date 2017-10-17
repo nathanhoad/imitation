@@ -2,8 +2,22 @@
 
 A few mocking helpers for testing.
 
+## Usage with Jest
 
-# Usage
+In your `package.json` file, simple set a transform:
+
+```javascript
+{
+    "jest": {
+        "transform": {
+            ".*": "<rootDir>/node_modules/imitation/jest"
+        }
+    }
+}
+```
+
+
+## Usage with Ava
 
 The most common use of Imitation is when you are testing React components that `require` css and/or images.
 
@@ -11,6 +25,7 @@ Images will resolve as just their path and CSS files will resolve as a Proxy obj
 just the name of the property.
 
 ```javascript
+const { test } = require('ava');
 const { mockDOM, unmockDOM, mockAssets, unmockAssets } = require('imitation');
 const { test } = require('ava');
 const { shallow } = require('enzyme');
@@ -42,6 +57,7 @@ test("It renders", t => {
 You can also mock a Redux Store and URLs when testing Redux Actions:
 
 ```javascript
+const { test } = require('ava');
 const { mockStore, mockURL, unmockURLs, mockDOM, mockAssets } = require('imitation');
 const Immutable = require('immutable');
 const { test } = require('ava');
