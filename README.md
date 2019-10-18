@@ -1,10 +1,12 @@
 # Imitation
 
-Mock out non-code imports in Typescript Jest tests
+A simple Jest transform for non-code imports
 
 ## Usage with Jest
 
-Set a Jest transform in your `package.json` file:
+`npm i --save-dev imitation`
+
+Then set a Jest transform in your `package.json` file:
 
 ```json
 {
@@ -18,7 +20,7 @@ Set a Jest transform in your `package.json` file:
 
 Stylesheet files (CSS/SCSS/Less) will resolve to proxies that return any classname as itself (eg. `styles.base` resolves to 'base').
 
-Anything else will resolve to require string (eg. 'something.png' will resolve to just 'something.png');
+Anything else (ie. images or fonts or whatever) will resolve to require string (eg. 'something.png' will resolve to just 'something.png');
 
 ## Authors
 
