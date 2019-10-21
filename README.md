@@ -1,6 +1,6 @@
 # Imitation
 
-A simple Jest transform for non-code imports
+A simple Jest transform for non-code imports. It helps for testing stuff like CSS Modules and images.
 
 ## Usage with Jest
 

@@ -2,3 +2,4 @@
 Thumbs.db
 *.log
 /src
+tsconfig.json
