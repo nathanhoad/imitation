@@ -11,9 +11,12 @@ Then set a Jest transform in your `package.json` file:
 ```json
 {
   "jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js", "scss", "png", "jpg"],
     "transform": {
-      "\\.(css|scss|jpg|png|svg|eot|woff)$": "<rootDir>/node_modules/imitation"
-    }
+      "\\.(ts|tsx)$": "ts-jest",
+      "\\.(scss|png|jpg)$": "<rootDir>/node_modules/imitation"
+    },
+    "testRegex": ".*\\.test\\.(ts|tsx)$"
   }
 }
 ```
