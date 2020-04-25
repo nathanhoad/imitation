@@ -1,6 +1,6 @@
 {
   "name": "imitation",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "A simple Jest moduleNameMapper for non-code imports",
   "main": "styles.js",
   "scripts": {
