@@ -1,11 +1,11 @@
 {
   "name": "imitation",
   "version": "2.0.3",
-  "description": "A simple Jest transform for non-code imports",
-  "main": "dist/index.js",
+  "description": "A simple Jest moduleNameMapper for non-code imports",
+  "main": "styles.js",
   "scripts": {
-    "test": "jest",
-    "prepublishOnly": "npm test && tsc"
+    "test": "jest --coverage",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
@@ -24,23 +24,8 @@
   },
   "homepage": "https://github.com/nathanhoad/imitation#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.19",
-    "@types/node": "^12.11.1",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
+    "jest": "^25.4.0",
+    "typescript": "^3.8.3"
   },
-  "dependencies": {},
-  "jest": {
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest"
-    },
-    "testRegex": ".*\\.test\\.(ts|tsx)$"
-  }
+  "dependencies": {}
 }

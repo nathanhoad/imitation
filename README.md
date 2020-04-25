@@ -1,29 +1,28 @@
 # Imitation
 
-A simple Jest transform for non-code imports. It helps for testing stuff like CSS Modules and images.
+A simple Jest moduleNameMapper for non-code imports. It helps for testing stuff like CSS Modules and images.
 
 ## Usage with Jest
 
 `npm i --save-dev imitation`
 
-Then set a Jest transform in your `package.json` file:
+Then set it up in your `jest.config.js` file:
 
 ```json
 {
   "jest": {
-    "moduleFileExtensions": ["ts", "tsx", "js", "scss", "png", "jpg"],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest",
-      "\\.(scss|png|jpg)$": "<rootDir>/node_modules/imitation"
-    },
-    "testRegex": ".*\\.test\\.(ts|tsx)$"
+    // ... other config
+    "moduleNameMapper": {
+      "\\.(svg|png|jpg)$": "imitation/images",
+      "\\.(scss|css)$": "imitation/styles"
+    }
   }
 }
 ```
 
 Stylesheet files (CSS/SCSS/Less) will resolve to proxies that return any classname as itself (eg. `styles.base` resolves to 'base').
 
-Anything else (ie. images or fonts or whatever) will resolve to require string (eg. 'something.png' will resolve to just 'something.png');
+Anything else (ie. images or fonts or whatever) will resolve to the string "imitated".
 
 ## Authors
 
